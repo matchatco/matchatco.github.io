@@ -1,11 +1,11 @@
 <?php
 
 // YouTube live stream URL
-$youtube_id = $_GET['id'];
+//$youtube_id = $_GET['id'];
 
 //$type_url = $_GET['type'];
 
-$youtube_live_url = "https://www.youtube.com/watch?v=$youtube_id";
+$youtube_live_url = "https://www.youtube.com/watch?v=z4M7UX6MCP0";
 
 // Fetch the live stream URL using cURL
 $ch = curl_init();
