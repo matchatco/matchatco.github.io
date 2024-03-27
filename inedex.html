@@ -1,0 +1,177 @@
+<style>
+
+</style>
+<!DOCTYPE html> 
+<html>
+   <head>
+      <meta charset="utf-8">
+   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<style>
+.plyr{width:100%;height:100%;position:absolute;top:0;right:0;left:0}
+
+.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {background: #008280 !important;}
+
+.plyr__control.plyr__tab-focus {box-shadow: 0 0 0 5px #ff00008f !important;}
+
+.plyr__control--overlaid {background: #008280 !important;}
+
+.plyr__menu__container .plyr__control[role=menuitemradio].plyr__tab-focus::before, .plyr__menu__container .plyr__control[role=menuitemradio]:hover::before {background: rgba(255, 255, 255, 0.22) !important;}
+
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {background: #008280 !important;}
+
+.plyr--video .plyr__controls {padding: 9px !important;}
+
+.plyr--video.plyr--hide-controls .plyr__controls {opacity: 1 !important;}
+
+.plyr__video-wrapper {
+
+    height: 100%;
+
+}
+
+.plyr video {
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+}
+ط
+.plyr--video {
+
+    position: fixed !important;
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    top: 0;
+
+}
+
+.plyr--loading:after {
+    content: '';
+    color: #fff;
+    text-align: center;
+   /* display: inline-block;
+    text-decoration: none;
+        z-index: 5555; */
+    position: absolute;
+    cursor: pointer;
+    bottom: 300px;
+    font-weight: 600;
+        color: #fff6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0nNzhweCcgaGVpZ2h0PSc3OHB4JyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCIgY2xhc3M9InVpbC1yaW5nLWFsdCI+CiAgICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0ibm9uZSIgY2xhc3M9ImJrIj48L3JlY3Q+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgc3Ryb2tlPSJyZ2JhKDAsMCwwLDApIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjwvY2lyY2xlPgogICAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDAiIHN0cm9rZT0iI2ZmZmZmZiIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNob2Zmc2V0IiBkdXI9IjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgZnJvbT0iMCIgdG89IjUwMiI+PC9hbmltYXRlPgogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNoYXJyYXkiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiB2YWx1ZXM9IjE1MC42IDEwMC40OzEgMjUwOzE1MC42IDEwMC40Ij48L2FuaW1hdGU+CiAgICA8L2NpcmNsZT4KPC9zdmc+) no-repeat center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.plyr--full-ui input[type=range] {-webkit-appearance: none;color: #008280 !important;}
+
+#player,
+video,
+html,
+body,
+.plyr { width: 100%; height: 100%; object-fit: fill;} .plyr::before {
+    content: 'www.your-site.com';
+    font-size: 12px;
+    width: 100%;
+    float: center;
+    position: absolute;
+    bottom: 40px;
+    color: #8c8c8c;
+    text-align: center;
+    left: 0;
+    z-index: 1;
+} @media (min-width: 320px) and (max-width: 480px){#player,video,html,body,
+.plyr { object-fit: contain;}}
+
+</style>
+   </head>
+   <body>
+<video id="player" class="plyr" autoplay="true" controls preload="metadata" name="media" >
+<source src="https://admdn1.cdn.mangomolo.com/adsports1/smil:adsports1.stream.smil/playlist.m3u8" 
+       type="application/x-mpegurl">
+</video>      
+<script src="https://cdn.plyr.io/3.5.10/plyr.js"></script>
+<script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
+      <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector("video");
+  const source = video.getElementsByTagName("source")[0].src;
+  
+  // For more options see: https://github.com/sampotts/plyr/#options
+  const defaultOptions = {};
+
+  if (Hls.isSupported()) {
+    // For more Hls.js options, see https://github.com/dailymotion/hls.js
+    var hls = new Hls();
+    hls.loadSource(source);
+    hls.attachMedia(video);
+    window.hls = hls;
+
+    // From the m3u8 playlist, hls parses the manifest and returns
+    // all available video qualities. This is important, in this approach,
+    // we will have one source on the Plyr player.
+    hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+
+      // Transform available levels into an array of integers (height values).
+      const availableQualities = hls.levels.map((l) => l.height)
+      availableQualities.unshift(0) //prepend 0 to quality array
+
+      // Add new qualities to option
+      defaultOptions.quality = {
+        default: 0, //Default - AUTO
+        options: availableQualities,
+        forced: true,        
+        onChange: (e) => updateQuality(e),
+      }
+		    // Add Auto Label 
+		    defaultOptions.i18n = {
+		    	qualityLabel: {
+		    		0: 'تلقائية',
+		    	},
+		    }
+      hls.on(Hls.Events.LEVEL_SWITCHED, function (event, data) {
+          var span = document.querySelector(".plyr__menu__container [data-plyr='quality'][value='0'] span")
+          if (hls.autoLevelEnabled) {
+            span.innerHTML = `AUTO (${hls.levels[data.level].height}p)`
+          } else {
+            span.innerHTML = `AUTO`
+          }
+        })
+      // Initialize new Plyr player with quality options
+      var player = new Plyr(video, defaultOptions);
+      player.on('languagechange', () => {
+			// Caption support is still flaky. See: https://github.com/sampotts/plyr/issues/994
+			setTimeout(() => hls.subtitleTrack = player.currentTrack, 50);
+		});
+    });
+  } else {
+    // default options with no quality update in case Hls is not supported
+    var player = new Plyr(video, defaultOptions);
+  }
+
+  function updateQuality(newQuality) {
+      if (newQuality === 0) {
+        window.hls.currentLevel = -1; //Enable AUTO quality if option.value = 0
+      } else {
+        window.hls.levels.forEach((level, levelIndex) => {
+          if (level.height === newQuality) {
+            console.log("Found quality match with " + newQuality);
+            window.hls.currentLevel = levelIndex;
+          }
+        });
+      }
+    }
+});
+</script>
+   </body>
+</html>
